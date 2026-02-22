@@ -6,6 +6,9 @@
   <title>Devon Peroutky</title>
   <meta name="description" content="Devon Peroutky — Software Engineer, Builder, Founder">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/custom.css">
   <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
   <script>
@@ -13,6 +16,9 @@
       darkMode: 'class',
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          },
           colors: {
             surface: {
               light: '#fafafa',
@@ -28,23 +34,21 @@
     }
   </script>
 </head>
-<body class="bg-surface-light dark:bg-surface-dark text-neutral-900 dark:text-neutral-100 min-h-screen flex flex-col">
+<body class="bg-surface-light dark:bg-surface-dark text-neutral-900 dark:text-neutral-100 font-sans min-h-screen flex flex-col antialiased">
 
   <!-- Theme Toggle -->
-  <header class="w-full max-w-2xl mx-auto px-6 pt-6 flex justify-end">
+  <header class="w-full max-w-[65ch] mx-auto px-6 pt-6 flex justify-end">
     <button
       id="theme-toggle"
       type="button"
       aria-label="Toggle dark mode"
-      class="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 focus-visible:ring-2 focus-visible:ring-neutral-400"
+      class="p-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 focus-visible:ring-2 focus-visible:ring-neutral-400"
     >
-      <!-- Sun icon (shown in dark mode) -->
-      <svg class="hidden dark:block w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <svg class="hidden dark:block w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <circle cx="12" cy="12" r="5"/>
         <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
       </svg>
-      <!-- Moon icon (shown in light mode) -->
-      <svg class="block dark:hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <svg class="block dark:hidden w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
       </svg>
     </button>
@@ -52,49 +56,48 @@
 
   <!-- Main Content -->
   <main class="flex-1 px-6">
-    <div class="max-w-2xl w-full mx-auto py-20">
+    <div class="max-w-[65ch] w-full mx-auto py-16 sm:py-24">
 
       <!-- Intro -->
       <section aria-label="Introduction">
-        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Devon Peroutky</h1>
-        <p class="mt-4 text-lg text-muted-light dark:text-muted-dark leading-relaxed">
-          I'm spending a lot of time woodworking and building stupid, but hopefully entertaining, robotics and A.I. stuff currently. Reach out at
-          <a href="mailto:devonperoutky@gmail.com" class="underline hover:text-neutral-900 dark:hover:text-neutral-100">devonperoutky@gmail.com</a>
-          if you think we could do something interesting together.
+        <h1 class="text-2xl sm:text-3xl font-semibold tracking-tight">Devon Peroutky</h1>
+        <p class="mt-4 text-muted-light dark:text-muted-dark leading-relaxed">
+          10 years of experience building ML and distributed systems at world class startups.
+        </p>
+        <p class="mt-4 text-muted-light dark:text-muted-dark leading-relaxed">
+          Most recently I designed the full post-training pipeline and infrastructure behind DeepHat V1, an open-source 7B cybersecurity LLM that is the smallest model ever to score 5% on Cybench, and beat GPT-4o-mini on code editing tasks despite being significantly smaller.
+        </p>
+        <p class="mt-4 text-muted-light dark:text-muted-dark leading-relaxed">
+          Along time ago, I founded Landria, an A.I. search and collaboration tool for corporate knowledge bases 
+              <a href="https://techcrunch.com/2020/03/24/brex-acquires-three-companies-to-build-out-its-bank-alternative-for-startups/" target="_blank" rel="noopener noreferrer"
+                 class="underline decoration-neutral-300 dark:decoration-neutral-700 hover:decoration-neutral-500 dark:hover:decoration-neutral-400">acquired by Brex in 2020</a>.
+          At Brex, I ran strategy and roadmaps across 5 developer platform teams.</p>
+        <p class="mt-4 text-muted-light dark:text-muted-dark leading-relaxed">
+          I led an engineering team at Valon where we turned a manual mortgage onboarding process into automated DAG pipelines that scaled throughput 20x and cut errors by >90%.
+        </p>
+        <p class="mt-4 text-muted-light dark:text-muted-dark leading-relaxed">On the side, I built Happy Accidents, a generative AI image app that hit 150k+ users purely through word of mouth, and earlier in my career I built Twilio's core transaction streaming pipeline powering their billing and compliance systems.
+
         </p>
       </section>
 
       <!-- Social Links -->
-      <section aria-label="Links" class="mt-10">
-        <nav class="flex gap-5 items-center">
-          <a
-            href="https://github.com/DevonPeroutky/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub"
-            class="text-muted-light dark:text-muted-dark hover:text-neutral-900 dark:hover:text-neutral-100"
-          >
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <section aria-label="Links" class="mt-8">
+        <nav class="flex gap-4 items-center">
+          <a href="https://github.com/DevonPeroutky/" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+             class="text-muted-light dark:text-muted-dark hover:text-neutral-900 dark:hover:text-neutral-100">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
             </svg>
           </a>
-          <a
-            href="https://www.linkedin.com/in/devon-peroutky-806748146"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            class="text-muted-light dark:text-muted-dark hover:text-neutral-900 dark:hover:text-neutral-100"
-          >
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <a href="https://www.linkedin.com/in/devon-peroutky-806748146" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+             class="text-muted-light dark:text-muted-dark hover:text-neutral-900 dark:hover:text-neutral-100">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
             </svg>
           </a>
-          <a
-            href="mailto:devonperoutky@gmail.com"
-            aria-label="Email"
-            class="text-muted-light dark:text-muted-dark hover:text-neutral-900 dark:hover:text-neutral-100"
-          >
-            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <a href="mailto:devonperoutky@gmail.com" aria-label="Email"
+             class="text-muted-light dark:text-muted-dark hover:text-neutral-900 dark:hover:text-neutral-100">
+            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
           </a>
@@ -103,50 +106,42 @@
 
       <!-- Projects -->
       <section aria-label="Projects" class="mt-16">
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-muted-light dark:text-muted-dark">Some stuff I've built</h2>
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <h2 class="text-medium font-medium text-muted-light dark:text-muted-dark">Some stuff I've built</h2>
+        <div class="mt-6 space-y-2">
 
-          <!-- Happy Accidents -->
-          <a href="http://jedsoftware.com/happy-accidents" target="_blank" rel="noopener noreferrer"
-             class="group block rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600">
-            <img src="images/qr-code.png" alt="Happy Accidents" class="w-full h-40 object-cover bg-neutral-100 dark:bg-neutral-900">
-            <div class="p-4">
-              <h3 class="font-semibold group-hover:underline"><span class="bg-purple-100 dark:bg-purple-900/40 text-purple-800 dark:text-purple-300 px-1.5 py-0.5 rounded text-sm">Happy Accidents</span></h3>
-              <p class="mt-2 text-sm text-muted-light dark:text-muted-dark">Built the only AI Image Generation platform to fully enable open-sourced models, LoRAs, and ControlNet in the cloud.</p>
-              <p class="mt-1 text-sm font-medium text-purple-600 dark:text-purple-400">Over 90,000 happy users.</p>
+          <a href="https://www.jedsoftware.com/happy-accidents" target="_blank" rel="noopener noreferrer"
+             class="group flex items-start gap-4 p-3 -mx-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/50">
+            <img src="images/qr-code.png" alt="Happy Accidents" class="w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-neutral-100 dark:bg-neutral-800">
+            <div class="min-w-0">
+              <p class="font-medium text-sm group-hover:underline">Happy Accidents</p>
+              <p class="text-sm text-muted-light dark:text-muted-dark">Open-source generative AI image creation and editing app. Built a distributed GPU cluster for inference and training. 150K+ users from word-of-mouth alone.</p>
             </div>
           </a>
 
-          <!-- Landria -->
           <a href="https://techcrunch.com/2020/03/24/brex-acquires-three-companies-to-build-out-its-bank-alternative-for-startups/" target="_blank" rel="noopener noreferrer"
-             class="group block rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600">
-            <img src="images/kevin.jpeg" alt="Devon and co-founder Kevin Whelan" class="w-full h-40 object-cover bg-neutral-100 dark:bg-neutral-900">
-            <div class="p-4">
-              <h3 class="font-semibold group-hover:underline"><span class="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300 px-1.5 py-0.5 rounded text-sm">Landria</span> <span class="text-sm text-muted-light dark:text-muted-dark">(Acquired by Brex)</span></h3>
-              <p class="mt-2 text-sm text-muted-light dark:text-muted-dark">Developed an AI-powered chatbot and RAG tool to search and synthesize companies' internal knowledge bases before it was cool.</p>
-              <p class="mt-1 text-sm font-medium text-blue-600 dark:text-blue-400">Acquired in 2020</p>
+             class="group flex items-start gap-4 p-3 -mx-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/50">
+            <img src="images/kevin.jpeg" alt="Landria co-founders" class="w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-neutral-100 dark:bg-neutral-800">
+            <div class="min-w-0">
+              <p class="font-medium text-sm group-hover:underline">Landria <span class="font-bold text-muted-light dark:text-muted-dark">(Acquired by Brex)</span></p>
+              <p class="text-sm text-muted-light dark:text-muted-dark">AI-powered chatbot and RAG tool for corporate knowledge bases.</p>
             </div>
           </a>
 
-          <!-- Compare -->
           <a href="https://github.com/DevonPeroutky/comparator" target="_blank" rel="noopener noreferrer"
-             class="group block rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600">
-            <img src="images/compare-screenshot.png" alt="Compare app screenshot" class="w-full h-40 object-cover bg-neutral-100 dark:bg-neutral-900">
-            <div class="p-4">
-              <h3 class="font-semibold group-hover:underline"><span class="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-300 px-1.5 py-0.5 rounded text-sm">Compare</span></h3>
-              <p class="mt-2 text-sm text-muted-light dark:text-muted-dark">Free, open-source, fully private in-browser web application for people to evaluate, compare, and share job offers.</p>
-              <p class="mt-1 text-sm font-medium text-green-600 dark:text-green-400">View on GitHub</p>
+             class="group flex items-start gap-4 p-3 -mx-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/50">
+            <img src="images/compare-screenshot.png" alt="Compare" class="w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-neutral-100 dark:bg-neutral-800">
+            <div class="min-w-0">
+              <p class="font-medium text-sm group-hover:underline">Compare</p>
+              <p class="text-sm text-muted-light dark:text-muted-dark">Free, open-source, fully private in-browser web application for people to evaluate, compare, and share job offers.</p>
             </div>
           </a>
 
-          <!-- Paul Revere -->
           <a href="https://www.jedsoftware.com/paul-revere" target="_blank" rel="noopener noreferrer"
-             class="group block rounded-lg overflow-hidden border border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600">
-            <img src="images/paul-revere.png" alt="Paul Revere app" class="w-full h-40 object-cover bg-neutral-100 dark:bg-neutral-900">
-            <div class="p-4">
-              <h3 class="font-semibold group-hover:underline"><span class="bg-red-100 dark:bg-red-900/40 text-red-800 dark:text-red-300 px-1.5 py-0.5 rounded text-sm">Paul Revere</span></h3>
-              <p class="mt-2 text-sm text-muted-light dark:text-muted-dark">Award-winning Military Recall App chosen by SAIC for the Department of Defense, providing commanders with advanced GPS tracking and alert capabilities.</p>
-              <p class="mt-1 text-sm font-medium text-red-600 dark:text-red-400">See more</p>
+             class="group flex items-start gap-4 p-3 -mx-3 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800/50">
+            <img src="images/paul-revere.png" alt="Paul Revere" class="w-12 h-12 rounded-lg object-cover flex-shrink-0 bg-neutral-100 dark:bg-neutral-800">
+            <div class="min-w-0">
+              <p class="font-medium text-sm group-hover:underline">Paul Revere</p>
+              <p class="text-sm text-muted-light dark:text-muted-dark">Award-winning Military Recall App chosen by SAIC for the Department of Defense, providing commanders with advanced GPS tracking and alert capabilities for squad management.</p>
             </div>
           </a>
 
@@ -155,77 +150,82 @@
 
       <!-- Work History -->
       <section aria-label="Work History" class="mt-16">
-        <h2 class="text-sm font-semibold uppercase tracking-wider text-muted-light dark:text-muted-dark">Work History</h2>
-        <p class="mt-4 text-sm text-muted-light dark:text-muted-dark leading-relaxed">
-          Spent almost 8 years building distributed Python and Scala systems, co-founding an A.I. search tool acquired by Brex, leading an Internal Developer Platform, and being a full-stack engineer on loads of various projects.
-        </p>
-        <div class="mt-6 space-y-8">
+        <h2 class="text-medium font-medium text-muted-light dark:text-muted-dark">Work history</h2>
+        <div class="mt-6 space-y-6">
 
-          <!-- Valon -->
           <div>
-            <div class="flex items-baseline gap-2 flex-wrap">
-              <h3 class="font-semibold"><span class="text-yellow-600 dark:text-yellow-400">Valon</span></h3>
-              <span class="text-muted-light dark:text-muted-dark">— Tech Lead</span>
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-sm">Redux Payments <span class="font-normal text-muted-light dark:text-muted-dark">— ML Architect</span></p>
+              <p class="text-xs text-muted-light dark:text-muted-dark whitespace-nowrap">2025 – Present</p>
             </div>
-            <p class="text-sm text-muted-light dark:text-muted-dark mt-0.5">Nov 2021 – Apr 2023</p>
-            <p class="mt-2 text-sm leading-relaxed">Built and led the Mortgage Onboarding Platform. Architected data pipelines for ingesting, transforming, and validating mortgages transferred to Valon, as well as user-facing applications for managing mortgage batches.</p>
+            <p class="mt-1 text-sm text-muted-light dark:text-muted-dark leading-relaxed">Designed and built an ML payment retry optimization system using XGBoost, increasing failed payment recovery by 18%. Built the end-to-end ML pipeline and a novel counterfactual evaluation framework.</p>
           </div>
 
-          <!-- Brex -->
           <div>
-            <div class="flex items-baseline gap-2 flex-wrap">
-              <h3 class="font-semibold"><span class="text-orange-600 dark:text-orange-400">Brex</span></h3>
-              <span class="text-muted-light dark:text-muted-dark">— Technical Manager</span>
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-sm">Kindo <span class="font-normal text-muted-light dark:text-muted-dark">— Staff ML Engineer</span></p>
+              <p class="text-xs text-muted-light dark:text-muted-dark whitespace-nowrap">2024 – Present</p>
             </div>
-            <p class="text-sm text-muted-light dark:text-muted-dark mt-0.5">Apr 2020 – Oct 2021</p>
-            <p class="mt-2 text-sm leading-relaxed">Manager for the internal Developer Platform. Set vision, metrics, and roadmaps for the 5 developer platform teams within Brex.</p>
+            <p class="mt-1 text-sm text-muted-light dark:text-muted-dark leading-relaxed">Created DeepHat V1, a SOTA 7B cybersecurity LLM — the smallest model to score 5% on Cybench, outperforming GPT-4o-mini on code editing tasks. Architected the full post-training pipeline including data mix, evaluation, and distributed training infrastructure.</p>
           </div>
 
-          <!-- Landria -->
           <div>
-            <div class="flex items-baseline gap-2 flex-wrap">
-              <h3 class="font-semibold"><span class="text-blue-600 dark:text-blue-400">Landria</span></h3>
-              <span class="text-muted-light dark:text-muted-dark">— CEO & Founder</span>
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-sm">Valon <span class="font-normal text-muted-light dark:text-muted-dark">— Tech Lead</span></p>
+              <p class="text-xs text-muted-light dark:text-muted-dark whitespace-nowrap">2021 – 2023</p>
             </div>
-            <p class="text-sm text-muted-light dark:text-muted-dark mt-0.5">Sep 2018 – Apr 2020</p>
-            <p class="mt-2 text-sm leading-relaxed">Built an AI-powered chatbot and RAG tool on companies' internal knowledge bases before it was cool.
-              <a href="https://techcrunch.com/2020/03/24/brex-acquires-three-companies-to-build-out-its-bank-alternative-for-startups/" target="_blank" rel="noopener noreferrer" class="underline text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300">Acquired by Brex in 2020.</a>
+            <p class="mt-1 text-sm text-muted-light dark:text-muted-dark leading-relaxed">Led engineering team building the Mortgage Onboarding Platform. Scaled transfer throughput 20x with >90% error reduction via automated DAG pipelines processing 40K+ monthly mortgages.</p>
+          </div>
+
+          <div>
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-sm">Brex <span class="font-normal text-muted-light dark:text-muted-dark">— Technical Manager</span></p>
+              <p class="text-xs text-muted-light dark:text-muted-dark whitespace-nowrap">2020 – 2021</p>
+            </div>
+            <p class="mt-1 text-sm text-muted-light dark:text-muted-dark leading-relaxed">Managed the internal Developer Platform. Set OKRs, metrics, and roadmaps for 5 platform teams.</p>
+          </div>
+
+          <div>
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-sm">Landria <span class="font-normal text-muted-light dark:text-muted-dark">— Founder</span></p>
+              <p class="text-xs text-muted-light dark:text-muted-dark whitespace-nowrap">2018 – 2020</p>
+            </div>
+            <p class="mt-1 text-sm text-muted-light dark:text-muted-dark leading-relaxed">Designed and built an A.I. search and collaboration tool for corporate knowledge bases.
+              <a href="https://techcrunch.com/2020/03/24/brex-acquires-three-companies-to-build-out-its-bank-alternative-for-startups/" target="_blank" rel="noopener noreferrer"
+                 class="underline decoration-neutral-300 dark:decoration-neutral-700 hover:decoration-neutral-500 dark:hover:decoration-neutral-400">Acquired by Brex.</a>
             </p>
           </div>
 
-          <!-- Twilio -->
           <div>
-            <div class="flex items-baseline gap-2 flex-wrap">
-              <h3 class="font-semibold"><span class="text-red-600 dark:text-red-400">Twilio</span></h3>
-              <span class="text-muted-light dark:text-muted-dark">— Senior Engineer</span>
+            <div class="flex items-baseline justify-between gap-4">
+              <p class="font-medium text-sm">Twilio <span class="font-normal text-muted-light dark:text-muted-dark">— Senior Engineer</span></p>
+              <p class="text-xs text-muted-light dark:text-muted-dark whitespace-nowrap">2015 – 2018</p>
             </div>
-            <p class="text-sm text-muted-light dark:text-muted-dark mt-0.5">Sep 2015 – Sep 2018</p>
-            <p class="mt-2 text-sm leading-relaxed">Built the core streaming pipeline for processing and aggregating transactions via S3, Kafka, MySQL, and Spark. Platform powered usage-based billing, SOX compliance reports, and more.</p>
+            <p class="mt-1 text-sm text-muted-light dark:text-muted-dark leading-relaxed">Built the core streaming pipeline for processing transactions via S3, Kafka, MySQL, and Spark. Powered usage-based billing, SOX compliance, and the pricing engine.</p>
           </div>
 
         </div>
       </section>
 
-      <!-- Contact Callout -->
+      <!-- Contact -->
       <section aria-label="Contact" class="mt-16">
-        <div class="rounded-lg border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 p-6">
-          <p class="font-medium">Want to talk software, AI, or about life?</p>
-          <p class="mt-2 text-sm leading-relaxed">
-            Get in touch &rarr;
-            <a href="mailto:devonperoutky@gmail.com" class="underline text-muted-light dark:text-muted-dark hover:text-neutral-900 dark:hover:text-neutral-100">devonperoutky@gmail.com</a>
-          </p>
-          <p class="mt-2 text-sm text-muted-light dark:text-muted-dark leading-relaxed">
-            I'm working on building some silly robotics/AI/3D fabrication stuff for YouTube videos. If you're interested in working on them with me, hit me up.
-          </p>
-        </div>
+        <h2 class="text-medium font-medium text-muted-light dark:text-muted-dark">Get in touch</h2>
+        <p class="mt-3 text-sm leading-relaxed">
+          Want to talk software, AI, or about life?
+          <a href="mailto:devonperoutky@gmail.com"
+             class="underline decoration-neutral-300 dark:decoration-neutral-700 hover:decoration-neutral-500 dark:hover:decoration-neutral-400">devonperoutky@gmail.com</a>
+        </p>
+        <p class="mt-2 text-sm text-muted-light dark:text-muted-dark leading-relaxed">
+          I'm building silly robotics/AI/3D fabrication stuff for YouTube. If you're interested in collaborating, hit me up.
+        </p>
       </section>
 
     </div>
   </main>
 
   <!-- Footer -->
-  <footer class="w-full max-w-2xl mx-auto px-6 pb-8">
-    <p class="text-sm text-muted-light dark:text-muted-dark">
+  <footer class="w-full max-w-[65ch] mx-auto px-6 pb-8">
+    <p class="text-xs text-muted-light dark:text-muted-dark">
       &copy; 2026 Devon Peroutky
     </p>
   </footer>

@@ -1,10 +1,27 @@
 /* Custom styles for DevonPeroutky.com */
 
+/* Fluid base font size: 15px → 17px */
+html {
+  font-size: clamp(0.9375rem, 0.5vw + 0.875rem, 1.0625rem);
+  scroll-behavior: smooth;
+}
+
 /* Smooth transitions for dark/light mode */
 *,
 *::before,
 *::after {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Tighter letter-spacing for headings */
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+/* Refined link underlines */
+a {
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
 }
 
 /* Focus-visible for keyboard navigation */
@@ -17,9 +34,4 @@
 /* Remove default focus ring for mouse users */
 :focus:not(:focus-visible) {
   outline: none;
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
 }
