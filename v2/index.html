@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devon Peroutky</title>
+  <meta name="description" content="Devon Peroutky — Software Engineer, Builder, Founder">
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            header: ['"Space Grotesk"', 'sans-serif'],
+            dm: ['"DM Sans"', 'sans-serif'],
+          },
+          colors: {
+            accent: '#0e61fe',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans text-neutral-950 bg-white antialiased">
+
+  <!-- Fixed Header -->
+  <header class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-xl border-b border-neutral-100/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 lg:h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3 sm:gap-4">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 bg-black flex items-center justify-center shrink-0">
+          <span class="font-header font-bold text-white text-xs sm:text-sm lg:text-base lowercase tracking-tight">dp</span>
+        </div>
+        <h1 class="text-[17px] sm:text-[19px] lg:text-[25px] font-header uppercase tracking-[0.1em] sm:tracking-[0.15em] text-black font-semibold leading-none">
+          Devon Peroutky <span class="text-accent">SWE</span>
+        </h1>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-32 lg:pt-40 pb-16 sm:pb-24 lg:pb-32">
+
+    <!-- Intro -->
+    <section aria-label="Introduction" class="mb-16 sm:mb-20 lg:mb-28 flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6">
+      <img src="images/ascii-art-2.jpg" alt="Portrait of Devon Peroutky" class="w-24 h-24 sm:w-32 sm:h-32 lg:w-40 lg:h-40 shrink-0 rounded-lg object-cover" />
+      <div>
+        <p class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-tight text-neutral-800 leading-[1.3] sm:leading-[1.3] md:leading-[1.3] lg:leading-[1.3] max-w-3xl font-dm text-center sm:text-left">
+          Software Engineer &amp; Builder.<br />
+          Architecting <span class="text-accent font-bold">ML systems</span> and distributed platforms at world-class startups.
+        </p>
+      </div>
+    </section>
+
+    <!-- Two-column Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-8 sm:gap-x-12 lg:gap-x-16 gap-y-12 sm:gap-y-16 lg:gap-y-24">
+
+      <!-- LEFT COLUMN -->
+      <div class="lg:col-span-8 space-y-16 sm:space-y-20 lg:space-y-28">
+
+        <!-- Highlights (mimics Education block shape) -->
+        <section aria-label="Some things I've done">
+          <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 mb-6 sm:mb-8 lg:mb-10">Some things I've done</h2>
+          <div class="space-y-6 sm:space-y-8">
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 group">
+              <div class="font-dm text-sm font-bold text-neutral-500 sm:w-16 shrink-0">2025</div>
+              <div>
+                <h3 class="text-base font-extrabold tracking-[0.025em]">Created & Open-sourced DeepHat V1 — 7B Cybersecurity LLM</h3>
+                <p class="font-dm text-sm font-medium text-neutral-600 mt-1">Smallest open-source model ever to score 5% on Cybench; beat GPT-4o-mini on code editing.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 group">
+              <div class="font-dm text-sm font-bold text-neutral-500 sm:w-16 shrink-0">2020</div>
+              <div>
+                <h3 class="text-base font-extrabold tracking-[0.025em]">Founded Landria — Acquired by Brex</h3>
+                <p class="font-dm text-sm font-medium text-neutral-600 mt-1">Created Landria, an AI search and collaboration tool for corporate knowledge bases used by several publically traded companies before getting acquired by Brex.</p>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 group">
+              <div class="font-dm text-sm font-bold text-neutral-500 sm:w-16 shrink-0">2023</div>
+              <div>
+                <h3 class="text-base font-extrabold uppercase tracking-[0.025em]">Happy Accidents — 150K+ Users</h3>
+                <p class="font-dm text-sm font-medium text-neutral-600 mt-1">Generative AI image app grown entirely through word-of-mouth.</p>
+                <p class="text-[11px] font-bold uppercase tracking-[0.05em] text-neutral-500 mt-1.5">Distributed GPU Cluster</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Where I've worked -->
+        <section aria-label="Where I've worked">
+          <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 mb-6 sm:mb-8 lg:mb-10">Where I've worked</h2>
+
+          <div class="space-y-8 sm:space-y-10">
+
+            <div>
+              <div class="flex items-baseline justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold">Staff ML Engineer, Kindo</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.05em] text-neutral-500 whitespace-nowrap">2024 — PRES</span>
+              </div>
+              <p class="font-dm text-base font-medium text-neutral-600 leading-[1.625]">Created DeepHat V1, a SOTA 7B cybersecurity LLM. Architected the full post-training pipeline — data mix, evaluation, and distributed training infrastructure.</p>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold">ML Architect, Redux Payments</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.05em] text-neutral-500 whitespace-nowrap">2025 — PRES</span>
+              </div>
+              <p class="font-dm text-base font-medium text-neutral-600 leading-[1.625]">ML payment retry optimization with XGBoost; +18% recovery on failed payments. Built a novel counterfactual evaluation framework.</p>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold">Tech Lead, Valon</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.05em] text-neutral-500 whitespace-nowrap">2021 — 2023</span>
+              </div>
+              <p class="font-dm text-base font-medium text-neutral-600 leading-[1.625]">Led the Mortgage Onboarding Platform. Scaled throughput 20× with &gt;90% error reduction via automated DAG pipelines processing 40K+ monthly mortgages.</p>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold">Technical Manager, Brex</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.05em] text-neutral-500 whitespace-nowrap">2020 — 2021</span>
+              </div>
+              <p class="font-dm text-base font-medium text-neutral-600 leading-[1.625]">Managed the internal Developer Platform. Set OKRs, metrics, and roadmaps for 5 platform teams.</p>
+            </div>
+
+            <div>
+              <div class="flex items-baseline justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold">Senior Engineer, Twilio</h3>
+                <span class="text-xs font-bold uppercase tracking-[0.05em] text-neutral-500 whitespace-nowrap">2015 — 2018</span>
+              </div>
+              <p class="font-dm text-base font-medium text-neutral-600 leading-[1.625]">Built the core streaming pipeline for processing transactions via S3, Kafka, MySQL, and Spark. Powered usage-based billing and SOX compliance.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Personal Projects -->
+        <section aria-label="Personal Projects & Open Source">
+          <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 mb-6 sm:mb-8 lg:mb-10">Personal Projects &amp; Open Source</h2>
+
+          <div class="space-y-10 sm:space-y-12">
+
+            <article class="group border-l-2 border-neutral-200 hover:border-accent transition-colors duration-200 pl-4 sm:pl-5 lg:pl-6">
+              <div class="flex items-center gap-5 sm:gap-6 mb-3 sm:mb-4">
+                <img src="../images/qr-code.png" alt="Happy Accidents icon" class="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-lg object-cover" />
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-lg font-bold">
+                    <a href="https://www.jedsoftware.com/happy-accidents" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-baseline gap-1.5 decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:text-accent hover:underline hover:decoration-accent">
+                      Happy Accidents
+                      <svg class="w-3.5 h-3.5 translate-y-[1px] opacity-0 -translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+                    </a>
+                  </h3>
+                  <p class="font-dm text-sm font-normal text-neutral-600 mt-2 leading-[1.625]">Open-source generative AI image creation and editing app. Built a distributed GPU cluster for inference and training. 150K+ users from word-of-mouth alone.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="group border-l-2 border-neutral-200 hover:border-accent transition-colors duration-200 pl-4 sm:pl-5 lg:pl-6">
+              <div class="flex items-center gap-5 sm:gap-6 mb-3 sm:mb-4">
+                <img src="../images/kevin.jpeg" alt="Landria icon" class="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-lg object-cover" />
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-lg font-bold">
+                    <a href="https://techcrunch.com/2020/03/24/brex-acquires-three-companies-to-build-out-its-bank-alternative-for-startups/" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-baseline gap-1.5 decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:text-accent hover:underline hover:decoration-accent">
+                      Landria
+                      <svg class="w-3.5 h-3.5 translate-y-[1px] opacity-0 -translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+                    </a>
+                    <span class="text-neutral-500 font-medium">(Acquired by Brex)</span>
+                  </h3>
+                  <p class="font-dm text-sm font-normal text-neutral-600 mt-2 leading-[1.625]">AI-powered chatbot and RAG tool for corporate knowledge bases. Acquired by Brex in 2020.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="group border-l-2 border-neutral-200 hover:border-accent transition-colors duration-200 pl-4 sm:pl-5 lg:pl-6">
+              <div class="flex items-center gap-5 sm:gap-6 mb-3 sm:mb-4">
+                <img src="../images/compare-screenshot.png" alt="Compare icon" class="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-lg object-cover" />
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-lg font-bold">
+                    <a href="https://github.com/DevonPeroutky/comparator" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-baseline gap-1.5 decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:text-accent hover:underline hover:decoration-accent">
+                      Compare
+                      <svg class="w-3.5 h-3.5 translate-y-[1px] opacity-0 -translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+                    </a>
+                  </h3>
+                  <p class="font-dm text-sm font-normal text-neutral-600 mt-2 leading-[1.625]">Free, open-source, fully-private in-browser web application to evaluate, compare, and share job offers.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="group border-l-2 border-neutral-200 hover:border-accent transition-colors duration-200 pl-4 sm:pl-5 lg:pl-6">
+              <div class="flex items-center gap-5 sm:gap-6 mb-3 sm:mb-4">
+                <img src="../images/paul-revere.png" alt="Paul Revere icon" class="w-20 h-20 sm:w-24 sm:h-24 shrink-0 rounded-lg object-cover" />
+                <div class="min-w-0 flex-1">
+                  <h3 class="text-lg font-bold">
+                    <a href="https://www.jedsoftware.com/paul-revere" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-baseline gap-1.5 decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:text-accent hover:underline hover:decoration-accent">
+                      Paul Revere
+                      <svg class="w-3.5 h-3.5 translate-y-[1px] opacity-0 -translate-x-1 transition-all duration-200 group-hover:opacity-100 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10"/></svg>
+                    </a>
+                  </h3>
+                  <p class="font-dm text-sm font-normal text-neutral-600 mt-2 leading-[1.625]">Award-winning Military Recall App chosen by SAIC for the Department of Defense — GPS tracking and alert capabilities for squad management.</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div class="lg:col-span-4 space-y-16 sm:space-y-20 lg:space-y-28">
+
+        <!-- Links -->
+        <section aria-label="External links">
+          <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 mb-6 sm:mb-8 lg:mb-10">Links</h2>
+          <nav class="flex flex-col gap-3 sm:gap-4">
+            <a href="https://github.com/DevonPeroutky/" target="_blank" rel="noopener noreferrer" class="text-sm font-bold uppercase tracking-[0.025em] text-neutral-700 hover:text-accent">GitHub</a>
+            <a href="https://www.linkedin.com/in/devon-peroutky-806748146" target="_blank" rel="noopener noreferrer" class="text-sm font-bold uppercase tracking-[0.025em] text-neutral-700 hover:text-accent">LinkedIn</a>
+            <a href="mailto:devonperoutky@gmail.com" class="text-sm font-bold uppercase tracking-[0.025em] text-neutral-700 hover:text-accent">Email</a>
+          </nav>
+        </section>
+
+        <!-- Education -->
+        <section aria-label="Education">
+          <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 mb-6 sm:mb-8 lg:mb-10">Education</h2>
+          <div>
+            <h3 class="text-base font-extrabold uppercase tracking-[0.025em]">University of Virginia</h3>
+            <p class="font-dm text-sm font-medium text-neutral-600 mt-1">B.S. in Computer Science</p>
+            <p class="font-dm text-sm font-medium text-neutral-600">B.A. in Economics</p>
+          </div>
+        </section>
+
+        <!-- Recognition -->
+        <section aria-label="Recognition">
+          <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 mb-6 sm:mb-8 lg:mb-10">Recognition</h2>
+          <div class="space-y-3">
+
+            <div class="flex items-baseline justify-between gap-3 sm:gap-4 group border-b border-neutral-100 pb-2 sm:pb-2.5">
+              <div>
+                <div class="text-base font-semibold">SAIC Grand Challenge Award</div>
+                <div class="text-[11px] font-bold uppercase tracking-[0.05em] text-neutral-500 mt-1">Department of Defense</div>
+              </div>
+              <div class="text-xs font-bold text-neutral-400">2014</div>
+            </div>
+
+            <div class="flex items-baseline justify-between gap-3 sm:gap-4 group border-b border-neutral-100 pb-2 sm:pb-2.5">
+              <div>
+                <div class="text-base font-semibold">Brex Acquisition</div>
+                <div class="text-[11px] font-bold uppercase tracking-[0.05em] text-neutral-500 mt-1">TechCrunch Feature</div>
+              </div>
+              <div class="text-xs font-bold text-neutral-400">2020</div>
+            </div>
+
+            <div class="flex items-baseline justify-between gap-3 sm:gap-4 group border-b border-neutral-100 pb-2 sm:pb-2.5">
+              <div>
+                <div class="text-base font-semibold">150K+ Users</div>
+                <div class="text-[11px] font-bold uppercase tracking-[0.05em] text-neutral-500 mt-1">Happy Accidents</div>
+              </div>
+              <div class="text-xs font-bold text-neutral-400">2023</div>
+            </div>
+
+            <div class="flex items-baseline justify-between gap-3 sm:gap-4 group border-b border-neutral-100 pb-2 sm:pb-2.5">
+              <div>
+                <div class="text-base font-semibold">DeepHat V1</div>
+                <div class="text-[11px] font-bold uppercase tracking-[0.05em] text-neutral-500 mt-1">Cybench SOTA (7B)</div>
+              </div>
+              <div class="text-xs font-bold text-neutral-400">2025</div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Skillset -->
+        <section aria-label="Skillset">
+          <h2 class="text-[10px] sm:text-xs font-bold uppercase tracking-[0.3em] text-neutral-500 mb-6 sm:mb-8 lg:mb-10">Skillset</h2>
+          <div class="space-y-6 sm:space-y-8">
+
+            <div>
+              <h4 class="text-sm font-bold uppercase text-black mb-4">AI / ML</h4>
+              <div class="space-y-1">
+                <div class="text-base font-normal text-neutral-950">LLM Post-Training &amp; Evaluation</div>
+                <div class="text-base font-normal text-neutral-950">Distributed GPU Training</div>
+                <div class="text-base font-normal text-neutral-950">RAG &amp; Agentic Systems</div>
+                <div class="text-base font-normal text-neutral-950">XGBoost / Tabular ML</div>
+                <div class="text-base font-normal text-neutral-950">Counterfactual Evaluation</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-bold uppercase text-black mb-4">Backend</h4>
+              <div class="space-y-1">
+                <div class="text-base font-normal text-neutral-950">Python</div>
+                <div class="text-base font-normal text-neutral-950">Go</div>
+                <div class="text-base font-normal text-neutral-950">Kafka</div>
+                <div class="text-base font-normal text-neutral-950">Spark</div>
+                <div class="text-base font-normal text-neutral-950">PostgreSQL</div>
+                <div class="text-base font-normal text-neutral-950">DAG Pipelines</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 class="text-sm font-bold uppercase text-black mb-4">DevOps</h4>
+              <div class="space-y-1">
+                <div class="text-base font-normal text-neutral-950">Kubernetes</div>
+                <div class="text-base font-normal text-neutral-950">Docker</div>
+                <div class="text-base font-normal text-neutral-950">Terraform</div>
+                <div class="text-base font-normal text-neutral-950">CI/CD</div>
+                <div class="text-base font-normal text-neutral-950">Distributed Systems</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-20 sm:mt-32 lg:mt-40 pt-6 sm:pt-8 lg:pt-10 border-t border-neutral-100 flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 bg-black flex items-center justify-center">
+          <span class="font-header font-bold text-white text-[10px] lowercase">dp</span>
+        </div>
+        <p class="text-xs font-bold uppercase tracking-[0.15em] text-neutral-500">&copy; 2026 Devon Peroutky</p>
+      </div>
+      <p class="text-[10px] font-bold uppercase tracking-[0.15em] text-neutral-400">Last Updated Apr 2026</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
